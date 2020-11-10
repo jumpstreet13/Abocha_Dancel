@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/contrainer_spacing_horizontal">
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        tools:text="Suka blyat" />
+
+    <RadioButton
+        android:id="@+id/firstOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        tools:text="Ya ne suka" />
+
+    <RadioButton
+        android:id="@+id/secondOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        tools:text="Da ya ne suka" />
+
+    <RadioButton
+        android:id="@+id/thirdOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        tools:text="Da ya ne suka" />
+
+    <RadioButton
+        android:id="@+id/fourthOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        tools:text="Da ya ne suka" />
+
+</RadioGroup>
