@@ -13,6 +13,7 @@ class QuizActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_layout)
         viewPager = findViewById(R.id.viewPager)
+        title = "Опрос"
 
         val questionModels = listOf<QuestionsModel>(
             QuestionsModel(
@@ -48,6 +49,7 @@ class QuizActivity : AppCompatActivity() {
             activity = this,
             questionsModels = questionModels
         )
-        viewPager.adapter
+        viewPager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+        viewPager.adapter = quizViewPagerAdapter
     }
 }
