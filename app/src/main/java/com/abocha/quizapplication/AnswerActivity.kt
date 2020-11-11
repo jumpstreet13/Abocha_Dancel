@@ -27,7 +27,6 @@ class AnswerActivity : AppCompatActivity() {
         rating = findViewById(R.id.ratingBar)
 
         count = intent.getIntExtra(ANSWER_COUNT, 0)
-        Toast.makeText(this, "$count", Toast.LENGTH_SHORT).show()
         rating.rating = count.toFloat()
     }
 
