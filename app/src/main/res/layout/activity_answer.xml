@@ -14,13 +14,13 @@
         tools:background="@color/black" />
 
     <RatingBar
-        android:id="@+id/raitingBar"
+        android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:numStars="5"
+        android:numStars="6"
         android:progressTint="@color/black"
-        android:rating="3"
+        android:rating="4"
         android:stepSize="1.0" />
 
     <TextView

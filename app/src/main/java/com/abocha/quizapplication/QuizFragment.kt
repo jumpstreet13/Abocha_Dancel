@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
+import android.widget.RadioGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 
@@ -18,6 +19,7 @@ class QuizFragment : Fragment() {
     private lateinit var fourthQuestion: RadioButton
     private lateinit var question: TextView
     private lateinit var questionsModel: QuestionsModel
+    private var radioGroup: RadioGroup? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +37,7 @@ class QuizFragment : Fragment() {
         secondQuestion = view.findViewById(R.id.secondOption)
         thirdQuestion = view.findViewById(R.id.thirdOption)
         fourthQuestion = view.findViewById(R.id.fourthOption)
+        radioGroup = view.findViewById(R.id.radioGroup)
         question = view.findViewById(R.id.question)
         return view
     }
@@ -50,7 +53,14 @@ class QuizFragment : Fragment() {
         fourthQuestion.text = answers[3]
     }
 
-    fun getAnswer(): Boolean = true
+    fun getAnswer(): Boolean =
+        when (radioGroup?.checkedRadioButtonId) {
+            R.id.firstOption -> questionsModel.answer == 1
+            R.id.secondOption -> questionsModel.answer == 2
+            R.id.thirdOption -> questionsModel.answer == 3
+            R.id.fourthOption -> questionsModel.answer == 4
+            else -> false
+        }
 
     companion object {
 
