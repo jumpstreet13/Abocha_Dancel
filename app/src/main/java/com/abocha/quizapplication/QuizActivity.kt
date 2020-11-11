@@ -15,7 +15,7 @@ class QuizActivity : AppCompatActivity() {
         viewPager = findViewById(R.id.viewPager)
         title = "Опрос"
 
-        val questionModels = listOf<QuestionsModel>(
+        val questionModels = listOf(
             QuestionsModel(
                 question = "Почему вы такой еблан",
                 answers = listOf(
@@ -23,7 +23,8 @@ class QuizActivity : AppCompatActivity() {
                     "Завали ебало",
                     "Потому что я айосник",
                     "Потому что я на бутылке"
-                )
+                ),
+                answer = 4
             ),
             QuestionsModel(
                 question = "Почему вы такой еблан",
@@ -32,7 +33,35 @@ class QuizActivity : AppCompatActivity() {
                     "Завали ебало",
                     "Потому что я айосник",
                     "Потому что я на бутылке"
-                )
+                ),
+                answer = 4
+            ), QuestionsModel(
+                question = "Почему вы такой еблан",
+                answers = listOf(
+                    "Хуй его знает",
+                    "Завали ебало",
+                    "Потому что я айосник",
+                    "Потому что я на бутылке"
+                ),
+                answer = 4
+            ), QuestionsModel(
+                question = "Почему вы такой еблан",
+                answers = listOf(
+                    "Хуй его знает",
+                    "Завали ебало",
+                    "Потому что я айосник",
+                    "Потому что я на бутылке"
+                ),
+                answer = 4
+            ), QuestionsModel(
+                question = "Почему вы такой еблан",
+                answers = listOf(
+                    "Хуй его знает",
+                    "Завали ебало",
+                    "Потому что я айосник",
+                    "Потому что я на бутылке"
+                ),
+                answer = 4
             ),
             QuestionsModel(
                 question = "Почему вы такой еблан",
@@ -41,7 +70,8 @@ class QuizActivity : AppCompatActivity() {
                     "Завали ебало",
                     "Потому что я айосник",
                     "Потому что я на бутылке"
-                )
+                ),
+                answer = 4
             )
         )
 

@@ -50,6 +50,8 @@ class QuizFragment : Fragment() {
         fourthQuestion.text = answers[3]
     }
 
+    fun getAnswer(): Boolean = true
+
     companion object {
 
         fun newInstance(questionsModel: QuestionsModel) =
