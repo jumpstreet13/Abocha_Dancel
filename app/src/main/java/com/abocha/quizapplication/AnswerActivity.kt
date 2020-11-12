@@ -27,7 +27,20 @@ class AnswerActivity : AppCompatActivity() {
         rating = findViewById(R.id.ratingBar)
 
         count = intent.getIntExtra(ANSWER_COUNT, 0)
+        when (count) {
+            0 -> showAnswer(R.drawable.bw, "Вдова", count)
+            1 -> showAnswer(R.drawable.h, "Соколиный глаз", count)
+            2 -> showAnswer(R.drawable.halk, "Халк", count)
+            3 -> showAnswer(R.drawable.thor, "Тор", count)
+            4 -> showAnswer(R.drawable.cap, "Капитан Америка", count)
+            5 -> showAnswer(R.drawable.im, "Железный человек", count)
+        }
+    }
+
+    private fun showAnswer(imageRes: Int, text: String, count: Int) {
         rating.rating = count.toFloat()
+        textView.text = text
+        imageView.setImageResource(imageRes)
     }
 
     companion object {

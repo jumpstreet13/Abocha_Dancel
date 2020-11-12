@@ -65,16 +65,6 @@ class QuizActivity : AppCompatActivity() {
                     "Потому что я на бутылке"
                 ),
                 answer = 4
-            ),
-            QuestionsModel(
-                question = "Почему вы такой еблан",
-                answers = listOf(
-                    "Хуй его знает",
-                    "Завали ебало",
-                    "Потому что я айосник",
-                    "Потому что я на бутылке"
-                ),
-                answer = 4
             )
         )
 
