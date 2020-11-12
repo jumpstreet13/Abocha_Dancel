@@ -1,4 +1,4 @@
-package com.abocha.quizapplication;
+package com.abocha.quizapplication.java;
 
 import android.os.Bundle;
 import android.widget.Button;
@@ -7,13 +7,15 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.abocha.quizapplication.kotlin.QuestionsModel;
+import com.abocha.quizapplication.R;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-class QuizActivityJava extends AppCompatActivity {
+public class QuizActivityJava extends AppCompatActivity {
 
-    private QuizViewPagerAdapter quizViewPagerAdapter;
+    private QuizViewPagerAdapterJava quizViewPagerAdapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,10 +25,10 @@ class QuizActivityJava extends AppCompatActivity {
         Button button = findViewById(R.id.button);
         setTitle("Опрос");
 
-        List<QuestionsModel> questionsModel = new ArrayList<>();
+        List<QuestionsModelJava> questionsModel = new ArrayList<>();
 
         questionsModel.add(
-                new QuestionsModel(
+                new QuestionsModelJava(
                         "Кто кроме Тора поднимал молот",
                         Arrays.asList(
                                 "Железный человек",
@@ -39,7 +41,7 @@ class QuizActivityJava extends AppCompatActivity {
         );
 
         questionsModel.add(
-                new QuestionsModel(
+                new QuestionsModelJava(
                         "Кто умер во второй части мстителей ?",
                         Arrays.asList(
                                 "Железный человек",
@@ -52,7 +54,7 @@ class QuizActivityJava extends AppCompatActivity {
         );
 
         questionsModel.add(
-                new QuestionsModel(
+                new QuestionsModelJava(
                         "Кого называют первым мстителем",
                         Arrays.asList(
                                 "Халк",
@@ -65,11 +67,11 @@ class QuizActivityJava extends AppCompatActivity {
         );
 
         questionsModel.add(
-                new QuestionsModel(
+                new QuestionsModelJava(
                         "Как звали супермена",
                         Arrays.asList(
                                 "Абакар Магомедов",
-                                "Данил Серибин",
+                                "Данил Сербин",
                                 "Дмитрий Григорьев",
                                 "Кларк Кент"
                         ),
@@ -78,7 +80,7 @@ class QuizActivityJava extends AppCompatActivity {
         );
 
         questionsModel.add(
-                new QuestionsModel(
+                new QuestionsModelJava(
                         "Чья это фраза - \"большая сила это большая ответственность\" ",
                         Arrays.asList(
                                 "Дядя бен",
@@ -92,8 +94,8 @@ class QuizActivityJava extends AppCompatActivity {
 
         button.setOnClickListener(view -> {
             int count = 0;
-            List<QuizFragment> fragmentList = quizViewPagerAdapter.getFragments();
-            for (QuizFragment fragment : fragmentList) {
+            List<QuizFragmentJava> fragmentList = quizViewPagerAdapter.getFragments();
+            for (QuizFragmentJava fragment : fragmentList) {
                 if (fragment.getAnswer()) {
                     count++;
                 }
@@ -101,14 +103,12 @@ class QuizActivityJava extends AppCompatActivity {
             startActivity(AnswerActivityJava.getIntent(QuizActivityJava.this, count));
         });
 
-        List<QuizFragment> quizFragments = new ArrayList<>();
+        List<QuizFragmentJava> quizFragments = new ArrayList<>();
 
-        for (QuestionsModel model : questionsModel) {
-            quizFragments.add(
-                    QuizFragment.Companion.newInstance(model)
-            );
+        for (QuestionsModelJava model : questionsModel) {
+            quizFragments.add(QuizFragmentJava.newInstance(model));
         }
-        quizViewPagerAdapter = new QuizViewPagerAdapter(
+        quizViewPagerAdapter = new QuizViewPagerAdapterJava(
                 this,
                 quizFragments
         );

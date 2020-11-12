@@ -1,4 +1,4 @@
-package com.abocha.quizapplication
+package com.abocha.quizapplication.kotlin
 
 import java.io.Serializable
 

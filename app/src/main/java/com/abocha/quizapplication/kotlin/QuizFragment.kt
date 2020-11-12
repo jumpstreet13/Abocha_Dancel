@@ -1,4 +1,4 @@
-package com.abocha.quizapplication
+package com.abocha.quizapplication.kotlin
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,8 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.abocha.quizapplication.R
+import com.abocha.quizapplication.R.layout
 
 const val QUESTIONS_KEY = "questions_key"
 
@@ -32,7 +34,7 @@ class QuizFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_quiz_layout, container, false)
+        val view = inflater.inflate(layout.fragment_quiz_layout, container, false)
         firstQuestion = view.findViewById(R.id.firstOption)
         secondQuestion = view.findViewById(R.id.secondOption)
         thirdQuestion = view.findViewById(R.id.thirdOption)

@@ -1,4 +1,4 @@
-package com.abocha.quizapplication
+package com.abocha.quizapplication.kotlin
 
 import android.content.Context
 import android.content.Intent
@@ -7,6 +7,9 @@ import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.abocha.quizapplication.R.drawable
+import com.abocha.quizapplication.R.id
+import com.abocha.quizapplication.R.layout
 
 class AnswerActivity : AppCompatActivity() {
 
@@ -16,20 +19,20 @@ class AnswerActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_answer)
+        setContentView(layout.activity_answer)
         title = "Ответ"
 
-        imageView = findViewById(R.id.imageView)
-        textView = findViewById(R.id.textView)
-        rating = findViewById(R.id.ratingBar)
+        imageView = findViewById(id.imageView)
+        textView = findViewById(id.textView)
+        rating = findViewById(id.ratingBar)
 
         when (val count = intent.getIntExtra(ANSWER_COUNT, 0)) {
-            0 -> showAnswer(R.drawable.bw, "Вдова", count)
-            1 -> showAnswer(R.drawable.h, "Соколиный глаз", count)
-            2 -> showAnswer(R.drawable.halk, "Халк", count)
-            3 -> showAnswer(R.drawable.thor, "Тор", count)
-            4 -> showAnswer(R.drawable.cap, "Капитан Америка", count)
-            5 -> showAnswer(R.drawable.im, "Железный человек", count)
+            0 -> showAnswer(drawable.bw, "Вдова", count)
+            1 -> showAnswer(drawable.h, "Соколиный глаз", count)
+            2 -> showAnswer(drawable.halk, "Халк", count)
+            3 -> showAnswer(drawable.thor, "Тор", count)
+            4 -> showAnswer(drawable.cap, "Капитан Америка", count)
+            5 -> showAnswer(drawable.im, "Железный человек", count)
         }
     }
 

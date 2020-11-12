@@ -1,8 +1,9 @@
-package com.abocha.quizapplication;
+package com.abocha.quizapplication.java;
 
+import java.io.Serializable;
 import java.util.List;
 
-class QuestionsModelJava {
+class QuestionsModelJava implements Serializable {
 
     private String question;
     private List<String> answers;

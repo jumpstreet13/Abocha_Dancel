@@ -1,8 +1,9 @@
-package com.abocha.quizapplication
+package com.abocha.quizapplication.kotlin
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.abocha.quizapplication.kotlin.QuizFragment
 
 class QuizViewPagerAdapter(
     activity: FragmentActivity,
