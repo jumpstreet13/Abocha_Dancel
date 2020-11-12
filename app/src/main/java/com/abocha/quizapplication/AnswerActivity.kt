@@ -6,16 +6,13 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.preference.PreferenceFragmentCompat
 
 class AnswerActivity : AppCompatActivity() {
 
     private lateinit var imageView: ImageView
     private lateinit var rating: RatingBar
     private lateinit var textView: TextView
-    private var count: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,8 +23,7 @@ class AnswerActivity : AppCompatActivity() {
         textView = findViewById(R.id.textView)
         rating = findViewById(R.id.ratingBar)
 
-        count = intent.getIntExtra(ANSWER_COUNT, 0)
-        when (count) {
+        when (val count = intent.getIntExtra(ANSWER_COUNT, 0)) {
             0 -> showAnswer(R.drawable.bw, "Вдова", count)
             1 -> showAnswer(R.drawable.h, "Соколиный глаз", count)
             2 -> showAnswer(R.drawable.halk, "Халк", count)
