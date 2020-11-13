@@ -12,11 +12,14 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 import com.abocha.quizapplication.kotlin.QuestionsModel;
 import com.abocha.quizapplication.R;
+
+import org.jetbrains.annotations.NotNull;
+
 import java.util.List;
 
 public class QuizFragmentJava extends Fragment {
 
-    private static String QUESTIONS_KEY = "QUESTIONS_KEY";
+    private static final String QUESTIONS_KEY = "QUESTIONS_KEY";
 
     private RadioButton firstQuestion;
     private RadioButton secondQuestion;
@@ -56,7 +59,7 @@ public class QuizFragmentJava extends Fragment {
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
+    public void onViewCreated(@NotNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         List<String> answers = questionsModel.getAnswers();
 
